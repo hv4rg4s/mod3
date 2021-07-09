@@ -1,0 +1,13 @@
+version: "3.9"
+
+volumes:
+  clamav_vol:
+
+services:
+  clamav:
+    image: mkodockx/docker-clamav:alpine
+    restart: always
+    ports:
+      - 3310:3310
+    volumes:
+      - clamav_vol:/var/lib/clamav
