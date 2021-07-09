@@ -1,0 +1,18 @@
+version: "3.9"
+
+volumes:
+  nessus_vol:
+
+services:
+  nessus:
+    image: tenableofficial/nessus
+    restart: always
+    ports:
+      - 8834:8834
+    volumes:
+      - nessus_vol:/opt
+    environment:
+      NAME: Mod3
+      ACTIVATION_CODE: $NESSUS_CODE
+      USERNAME: $NESSUS_USER
+      PASSWORD: $NESSUS_PASS
