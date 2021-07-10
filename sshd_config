@@ -1,0 +1,49 @@
+#	$OpenBSD: sshd_config,v 1.101 2017/03/14 07:19:07 djm Exp $
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/bin:/bin:/usr/sbin:/sbin
+
+#change default port
+Port 22143
+# Authentication:
+#maximum time to enter password
+LoginGraceTime 2m
+#no root access
+PermitRootLogin no
+#number of simultaneous login
+MaxStartups 2
+#number of attempts allowed when entering the password
+MaxAuthTries 3
+#user whitelist
+AllowUsers hvargas ubuntu
+#prevent access through username/password
+PasswordAuthentication no
+
+
+# some PAM modules and threads)
+ChallengeResponseAuthentication no
+
+# and ChallengeResponseAuthentication to 'no'.
+UsePAM yes
+
+#AllowAgentForwarding yes
+#AllowTcpForwarding yes
+#GatewayPorts no
+X11Forwarding yes
+#X11DisplayOffset 10
+#X11UseLocalhost yes
+#PermitTTY yes
+PrintMotd no
+#PrintLastLog yes
+#TCPKeepAlive yes
+#UseLogin no
+# no default banner path
+#Banner none
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
