@@ -1,0 +1,16 @@
+version: "3.9"
+
+volumes:
+  data_db:
+
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    ports:
+      - "63401:3306"
+    volumes:
+      - data_db:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: tarea
+      MYSQL_ROOT_PASSWORD: $ROOT_PASS
