@@ -13,13 +13,9 @@ CREATE TABLE evidencias(
 );
 -- insert value evidencias 
 INSERT INTO evidencias (nro, nomb_env) 
-VALUES ('1', 'ubuntu+openssh');
-INSERT INTO evidencias (nro, nomb_env) 
 VALUES ('3', 'actualizar parches');
 INSERT INTO evidencias (nro, nomb_env)
 VALUES ('4', 'listar parches');
-INSERT INTO evidencias (nro, nomb_env) 
-VALUES ('5', 'instalar nessus');
 INSERT INTO evidencias (nro, nomb_env) 
 VALUES ('7', 'exportar reporte nessus');
 INSERT INTO evidencias (nro, nomb_env) 
@@ -42,6 +38,8 @@ INSERT INTO evidencias (nro, nomb_env)
 VALUES ('21', 'politica password');
 INSERT INTO evidencias (nro, nomb_env)
 VALUES ('22', 'expirar pass ubuntu');
+
+
 -- create user with password error 
 CREATE USER 'mod3'@'localhost' IDENTIFIED BY 'pass1234';
 -- create user with password ok 
