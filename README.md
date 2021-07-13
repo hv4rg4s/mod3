@@ -17,3 +17,7 @@
 4. Run script_mysql.sql 
 
 5. Run script_strong_password.sh
+
+6. to consider:
+    - sshd config
+    - `sudo passwd -e $user` | `sudo chage -l $user`
